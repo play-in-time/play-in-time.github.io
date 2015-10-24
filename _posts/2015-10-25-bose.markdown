@@ -5,4 +5,4 @@ category: Services
 title: The underlying algorithm
 description: |
 ---
-Based on sound mathematical theory to provide optimized times for you.
+Based on sound mathematical theory to provide optimized times for you. [Click here](https://github.com/play-in-time/backend/blob/master/doc/knapsack_optimisation.pdf) to view full paper.
