@@ -1,0 +1,8 @@
+---
+layout: default
+img: knapsack.png
+category: Services
+title: The underlying algorithm
+description: |
+---
+Based on sound mathematical theory to provide optimized times for you.
