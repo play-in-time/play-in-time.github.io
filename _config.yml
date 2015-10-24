@@ -6,10 +6,6 @@ url: http://playinti.me
 title: inTime
 email: chris@playinti.me
 author: Chris Hinstorff
-description: > # ""This app uses Spotify's music database (including song times 
-and individual's genre preferences) to create a playlist that is 
-perfectly-timed for any activity. That is, the playlist will end exactly at the
- end of the activity's duration."""
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -26,3 +22,5 @@ permalink: pretty
 social:
   - title: github
     url: https://github.com/play-in-time
+  - title: try demo!
+    url: http://playinti.me/app
