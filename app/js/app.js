@@ -4,6 +4,9 @@ var redirect_uri = 'http://playinti.me/callback.html';
 
 var playlists = {};
 
+var minutesInput = "";
+var timeInput = "";
+
 // This is inactive for now
 function doLogin() {
   var url = 'https://accounts.spotify.com/authorize?client_id=' + client_id +
@@ -16,13 +19,17 @@ function doLogin() {
 function updateInputBox() {
   var dropdownValue = $("#selectmode")[0].value;
   var inputBox = $("#inputbox")[0];
-  inputBox.value = "";
   var units = $("#units");
   
   if (dropdownValue == "for") {
+    timeInput = inputBox.value;
+    inputBox.value = minutesInput;
     inputBox.placeholder = "42.5";
     units.text("minutes");
   } else {
+    minutesInput = inputBox.value;
+    inputBox.value = timeInput;
+
     inputBox.placeholder = "13:05";
     units.text("local time");
   }

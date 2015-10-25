@@ -9,41 +9,52 @@
   </head>
 
   <body>
-    <div class="banner">
+    <div id="wrapper">
+      <div class="banner">
+        <div class="container">
+          <h2>inTime</h2>
+          <p>Application developed at <a href="http://2015.polyhack.tufts.io/">Tufts PolyHack</a></p>
+        </div>
+      </div>
+
       <div class="container">
-        <h2>inTime</h2>
-        <p>Application developed at <a href="http://2015.polyhack.tufts.io/">Tufts PolyHack</a></p>
-      </div>
-    </div>
+        <div class="centered">
+          <div class="musicselect">
+            Play music 
+            <select id="selectmode">
+              <option>for</option>
+              <option>until time</option>
+            </select>
+            <input type="text" id="inputbox" placeholder="">
+            <span id="units"><!-- Modify text in here based on what's in select--></span>
+          </div>
+          <br />
+          <input type="radio" name="playmode" value="playlist" checked>From a playlist: <select id="selectPlaylist"></select> <br />
+          <input type="radio" name="playmode" value="justplay">Just play me music from my library!
+          <br />
+          <div class="centered" style="width:100px">
+            <button type="button" id="playbutton">Play!</button>
+          </div>
 
-    <div class="container">
-      <div class="centered">
-        <div class="musicselect">
-          Play music 
-          <select id="selectmode">
-            <option>for</option>
-            <option>until time</option>
-          </select>
-          <input type="text" id="inputbox" placeholder="">
-          <span id="units"><!-- Modify text in here based on what's in select--></span>
-        </div>
-        <br />
-        <input type="radio" name="playmode" value="playlist" checked>From a playlist: <select id="selectPlaylist"></select> <br />
-        <input type="radio" name="playmode" value="justplay">Just play me music from my library!
-        <br />
-        <button type="button" id="playbutton">Play!</button>
-
-        <div id="results">
-          <span id="loading">Loading results, please wait...</span>
-          <h3> Songs to playback: </h3>
-          <ul id="resultslist">
-          </ul>
+          <div id="results">
+            <span id="loading">Loading results, please wait...</span>
+            <h3> Songs to playback: </h3>
+            <ul id="resultslist">
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <div id="footer">
+        <div class="banner">
+          <div class="container">
+            <p>Source available at <a href="https://github.com/play-in-time/play-in-time.github.io/tree/master/app">github.com</a>. We have an <a href="http://api.playinti.me/">API too!</a></p>
+          </div>
+        </div>
+      </div>
 
     <!-- Include js -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/app.js"></script>
+    </div>
   </body>
 </html>
