@@ -9,6 +9,7 @@ html, body {
 #wrapper {
   min-height: 100%;
   position: relative;
+  padding-bottom: 64px;
 }
 
 .container {
@@ -47,7 +48,7 @@ html, body {
 
 #footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }
@@ -67,7 +68,7 @@ html, body {
 }
 
 #results {
-  height: 300px;
+  max-height: 600px;
   overflow: scroll;
 }
 
