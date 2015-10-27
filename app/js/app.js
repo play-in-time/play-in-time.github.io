@@ -81,6 +81,8 @@ $("#playbutton").click(function() {
       $.get("http://api.playinti.me/tracks_for_duration", params, function(res) {
           loading.hide();
           response = res.tracklist;
+	  
+	  var id_list = [];
 
           var totalTime = 0;
           for (var i=0; i < response.length; i++) {
@@ -92,10 +94,14 @@ $("#playbutton").click(function() {
             resultList = $("#resultslist");
             tag = "<li>" + name + " (" + duration.toFixed(2) + " min)</li>";
             resultList.append(tag); 
+	    id_list.push(track.id);
           }
 
           results.append("<p id=\"total\">Total time: "+totalTime.toFixed(2)+" min</p>");
 
+	  player = "<iframe src=\"https://embed.spotify.com/?uri=spotify:trackset:inTime:" + id_list.join(',') + "\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+
+	  results.append(player);
           console.log(res);
       });
     } else {
@@ -104,6 +110,8 @@ $("#playbutton").click(function() {
           loading.hide();
           response = res.tracklist;
 
+	  var id_list = [];
+
           var totalTime = 0;
           for (var i=0; i < response.length; i++) {
             var track = response[i].track;
@@ -113,11 +121,14 @@ $("#playbutton").click(function() {
 
             resultList = $("#resultslist");
             tag = "<li>" + name + " (" + duration.toFixed(2) + " min)</li>";
-            resultList.append(tag); 
+            resultList.append(tag);
+	    id_list.push(track.id); 
           }
 
           results.append("<p id=\"total\">Total time: "+totalTime.toFixed(2)+" min</p>");
+	  player = "<iframe src=\"https://embed.spotify.com/?uri=spotify:trackset:inTime:" + id_list.join(',') + "\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
 
+	  results.append(player);
           console.log(res);
       });
     }
