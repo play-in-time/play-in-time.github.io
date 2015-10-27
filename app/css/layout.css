@@ -12,6 +12,10 @@ html, body {
   padding-bottom: 64px;
 }
 
+#wrapper:after {
+  display: block;
+}
+
 .container {
   margin-top: 15px;
   margin-right: auto;
@@ -39,11 +43,24 @@ html, body {
 }
 
 .centered {
-  width: 575px;
+  max-width:800px;
+  width:100%;
+  margin:auto;
+  text-align:center;
   padding-left: auto;
   padding-right: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+.musicselect {
+  text-align:left;
+  display:inline-block;
+}
+
+.musicselect * {
+margin-top:0.5rem;
+margin-bottom:0.5rem;
 }
 
 #footer {
@@ -68,8 +85,30 @@ html, body {
 }
 
 #results {
-  max-height: 600px;
+  margin:auto;
+  padding: 10px;
+}
+
+#results:after {
+  content:'';
+  display:block;
+  clear:both;
+}
+
+#results-left {
+  max-height: 380px;
   overflow: scroll;
+  float:left;
+}
+
+#results-left h3 {
+  margin-top: 0;
+}
+
+#results-right {
+  width:0;
+  float:right;
+  height: 380px;
 }
 
 button {
