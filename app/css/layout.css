@@ -96,9 +96,11 @@ margin-bottom:0.5rem;
 }
 
 #results-left {
+  max-width: 300px;
   max-height: 380px;
   overflow: scroll;
   float:left;
+  text-align:left;
 }
 
 #results-left h3 {
@@ -120,6 +122,12 @@ button {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  padding-left: 0.4rem;
+  border-left: 3px solid #ccc;
+  margin-bottom: 5px;
 }
 
 /* Input element styling */
